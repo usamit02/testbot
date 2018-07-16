@@ -17,6 +17,7 @@ session_start();
 require_once(__DIR__."/include/dbinit.php");
 $na=$db->query("SELECT id,na FROM t01user WHERE id=1;")->fetchcolumn();
 echo$na;
+if($na="宇佐美"){echo"マスターです。";}
 ?>
 
   </BODY>

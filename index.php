@@ -7,7 +7,7 @@ session_start();
   <HEAD>
     <META HTTP-EQUIV='Content-Type' CONTENT='text/html;charset=UTF-8'>
     <meta name="viewport" content="width=640">
-    <title>記事一覧</title>
+    <title>記事一覧個人</title>
     <link rel="stylesheet" href="css/index.css">
 
   </HEAD>
@@ -17,7 +17,13 @@ session_start();
 require_once(__DIR__."/include/dbinit.php");
 $na=$db->query("SELECT id,na FROM t01user WHERE id=1;")->fetchcolumn();
 echo$na;
-if($na="宇佐美"){echo"マスターです。";}
+if($na="宇佐美")
+{
+    echo"マスターです。";
+}else{
+    echo"マスターではありません。";
+}
+
 ?>
 
   </BODY>
